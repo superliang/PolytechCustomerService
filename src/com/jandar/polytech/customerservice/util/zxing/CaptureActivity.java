@@ -76,7 +76,6 @@ public class CaptureActivity extends Activity implements Callback {
 			initCamera(surfaceHolder);
 		} else {
 			surfaceHolder.addCallback(this);
-			surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 		}
 		decodeFormats = null;
 		characterSet = null;
