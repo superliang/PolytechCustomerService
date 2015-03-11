@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/system_color_main_blue"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/bottom_phone"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/bottom_telephone"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/global_service_telephone"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bottom_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:text="刷新"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">博泰服务</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="global_image_desc">desc</string>
+    <string name="global_service_telephone">400-8899-900</string>
+
+    <!-- equipment listview item text -->
+    <string name="listview_item_equipment_factory">生产厂商：</string>
+    <string name="listview_item_equipment_type">设备型号：</string>
+    <string name="listview_item_equipment_id">设备编号：</string>
+
+    <!-- equipment listview item test text -->
+    <string name="test_listview_item_equipment_name1">设备1</string>
+    <string name="test_listview_item_equipment_name2">设备2</string>
+    <string name="test_listview_item_equipment_name3">设备3</string>
+    <string name="test_listview_item_equipment_factory">浙江建达科技股份有限公司</string>
+    <string name="test_listview_item_equipment_type">CPI-310010293</string>
+    <string name="test_listview_item_equipment_id">3938493828475</string>
+
+    <!-- mobile.hospital.barcode -->
+    <string name="scan_result">条码内容</string>
+    <string name="scan_try">扫一扫</string>
+    <string name="scan_text">请扫描ATM机上的二维码图案</string>
+    <string name="scan_failed">条码扫描失败</string>
+    <string name="title_activity_evaluate">EvaluateActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="Switch_on">经纬度转地址:开</string>
+    <string name="Switch_off">经纬度转地址:关</string>
+    <string name="title_activity_create_order">CreateOrderActivity</string>
+    <string name="title_activity_equipment_info">EquipmentInfoActivity</string>
+    <string name="title_activity_person_info">PersonInfoActivity</string>
+    <string name="title_activity_opinion">OpinionActivity</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+
+</resources>

@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/system_color_main_blue"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!-- title -->
+
+    <include layout="@layout/title_nothing" />
+
+    <!-- content -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:text="感谢您来体验全新的ATM服务之旅！"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:text="我们该如何称呼您？"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:text="姓名"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/firstUse_name_editText"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edittext_background"
+                android:paddingLeft="5dp"
+                android:text="梁先生"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:text="性别"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" />
+
+            <RadioGroup
+                android:id="@+id/firstUse_sex_radioGroup"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio1" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:paddingLeft="20dp"
+                    android:text="男"
+                    android:textSize="18sp"
+                    android:button="@drawable/cb_common_background"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/radio2" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/cb_common_background"
+                    android:paddingLeft="20dp"
+                    android:text="女"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:onClick="startClick"
+            android:text="旅程开始"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/firstuse_image" />
+
+</LinearLayout>

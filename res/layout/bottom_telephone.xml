@@ -1,0 +1,19 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/bottom_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/system_color_main_blue"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/bottom_telephone"
+        android:drawablePadding="15dp"
+        android:text="@string/global_service_telephone"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</merge>

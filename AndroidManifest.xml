@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jandar.polytech.customerservice"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="18" />
+
+    <!-- baidu map permission -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- baidu map key setting -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8m7e5U3tktascKGNTyzku2xi" />
+
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.LoadingActivity"
+            android:label="@string/title_activity_loading"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.AddOrderActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.RepairServiceActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.util.zxing.CaptureActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.FirstUseActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.EvaluateActivity"
+            android:label="@string/title_activity_evaluate" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.CreateOrderActivity"
+            android:label="@string/title_activity_create_order" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.EquipmentInfoActivity"
+            android:label="@string/title_activity_equipment_info" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.activity.PersonInfoActivity"
+            android:label="@string/title_activity_person_info" >
+        </activity>
+        <activity
+            android:name="com.jandar.polytech.customerservice.OpinionActivity"
+            android:label="@string/title_activity_opinion" >
+        </activity>
+    </application>
+
+</manifest>
