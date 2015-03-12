@@ -22,6 +22,7 @@ public class LoadingActivity extends BaseActivity {
 				public void run() {
 					Intent intent = new Intent(LoadingActivity.this,
 							CaptureActivity.class);
+					intent.putExtra("BeginScan", 1);
 					startActivity(intent);
 				}
 			}, 500);
