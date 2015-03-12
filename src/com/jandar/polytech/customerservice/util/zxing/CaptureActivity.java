@@ -18,7 +18,7 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -28,8 +28,10 @@ import com.jandar.polytech.customerservice.util.zxing.camera.CameraManager;
 import com.jandar.polytech.customerservice.util.zxing.decoding.CaptureActivityHandler;
 import com.jandar.polytech.customerservice.util.zxing.decoding.InactivityTimer;
 import com.jandar.polytech.customerservice.util.zxing.view.ViewfinderView;
+
 /**
  * Initial the camera
+ * 
  * @author Ryan.Tang
  */
 public class CaptureActivity extends Activity implements Callback {
@@ -50,17 +52,15 @@ public class CaptureActivity extends Activity implements Callback {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_capture);
-		//ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
-		
-		Button mButtonBack = (Button) findViewById(R.id.button_back);
-		mButtonBack.setOnClickListener(new OnClickListener() {
-			
+
+		ImageView mImageBack = (ImageView) findViewById(R.id.back_title_imageView);
+		mImageBack.setOnClickListener(new OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				CaptureActivity.this.finish();
-				
 			}
 		});
 		hasSurface = false;
@@ -87,7 +87,7 @@ public class CaptureActivity extends Activity implements Callback {
 		}
 		initBeepSound();
 		vibrate = true;
-		
+
 	}
 
 	@Override
@@ -105,9 +105,10 @@ public class CaptureActivity extends Activity implements Callback {
 		inactivityTimer.shutdown();
 		super.onDestroy();
 	}
-	
+
 	/**
-	 * ����ɨ����
+	 * Handler scan result
+	 * 
 	 * @param result
 	 * @param barcode
 	 */
@@ -116,8 +117,9 @@ public class CaptureActivity extends Activity implements Callback {
 		playBeepSoundAndVibrate();
 		String resultString = result.getText();
 		if (resultString.equals("")) {
-			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
-		}else {
+			Toast.makeText(CaptureActivity.this, "Scan failed!",
+					Toast.LENGTH_SHORT).show();
+		} else {
 			Intent resultIntent = new Intent();
 			Bundle bundle = new Bundle();
 			bundle.putString("result", resultString);
@@ -127,7 +129,7 @@ public class CaptureActivity extends Activity implements Callback {
 		}
 		CaptureActivity.this.finish();
 	}
-	
+
 	private void initCamera(SurfaceHolder surfaceHolder) {
 		try {
 			CameraManager.get().openDriver(surfaceHolder);

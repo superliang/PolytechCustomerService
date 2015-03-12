@@ -19,11 +19,11 @@
             android:layout_height="wrap_content" />
 
         <include
-            android:id="@+id/include1"
+            android:id="@+id/include"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            layout="@layout/activity_title" />
+            layout="@layout/title_back" />
     </RelativeLayout>
 
 </FrameLayout>
